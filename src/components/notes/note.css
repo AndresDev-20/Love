@@ -1,0 +1,179 @@
+/* =========================
+   OVERLAY
+========================= */
+.note {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+    padding: 12px; /* 🔑 evita que pegue a los bordes en móviles pequeños */
+}
+
+/* =========================
+   CARD (BASE)
+========================= */
+.note__card {
+    width: 100%;
+    max-width: 420px;
+    max-height: 90vh;            /* 🔥 CLAVE para móviles */
+    overflow-y: auto;
+    background: var(--note-bg);
+    border-radius: 22px;
+    border: 2px solid var(--note-pink);
+    box-shadow: 0 0 40px var(--note-pink-soft);
+    padding: 26px 22px;
+    position: relative;
+    animation: fadeIn 0.6s ease;
+    padding-top: 4em;
+}
+
+/* Scroll invisible */
+.note__card::-webkit-scrollbar {
+    width: 0;
+}
+.note__card {
+    scrollbar-width: none;
+}
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+.note__close {
+    position: absolute;
+    top: -.5px;
+    right: -.5px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--note-bg);
+    border: 2px solid var(--note-pink);
+    color: var(--note-pink);
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0 0 15px var(--note-pink-soft);
+}
+
+/* =========================
+   DECOR
+========================= */
+.note__decor {
+    height: 10px;
+    background: repeating-linear-gradient(
+        135deg,
+        var(--note-pink),
+        var(--note-pink) 10px,
+        transparent 10px,
+        transparent 18px
+    );
+    border-radius: 10px;
+}
+
+.note__decor--top {
+    margin-bottom: 18px;
+}
+
+.note__decor--bottom {
+    margin-top: 18px;
+}
+
+/* =========================
+   TEXT
+========================= */
+.note__title {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(26px, 7vw, 32px);
+    color: var(--note-pink);
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.note__content {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(14px, 4vw, 15px);
+    color: var(--note-text);
+    line-height: 1.85;
+    padding: 0 2px;
+}
+
+.note__content p {
+    margin-bottom: 16px;
+}
+
+.note__footer {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(20px, 6vw, 24px);
+    color: var(--note-pink);
+    text-align: right;
+    margin-top: 32px;
+    padding-right: 6px;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* =========================
+   MEDIA QUERIES
+========================= */
+
+/* 📱 Móviles MUY pequeños (≤360px) */
+@media (max-width: 360px) {
+    .note__card {
+        padding: 22px 18px;
+        border-radius: 18px;
+    }
+
+    .note__title {
+        margin-bottom: 18px;
+    }
+
+    .note__footer {
+        margin-top: 26px;
+    }
+
+    .note__close {
+        width: 34px;
+        height: 34px;
+        font-size: 16px;
+    }
+}
+
+/* 📱 Móviles normales (≥480px) */
+@media (min-width: 480px) {
+    .note__card {
+        padding: 30px 26px;
+        border-radius: 24px;
+    }
+
+    .note__content {
+        line-height: 1.9;
+    }
+}
+
+/* 📱 Móviles grandes / phablets (≥600px) */
+@media (min-width: 600px) {
+    .note__card {
+        max-height: 88vh;
+    }
+
+    .note__title {
+        font-size: 32px;
+    }
+
+    .note__footer {
+        font-size: 24px;
+    }
+}

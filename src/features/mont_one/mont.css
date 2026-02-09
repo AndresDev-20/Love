@@ -1,0 +1,144 @@
+.mont {
+    min-height: 100vh;
+    background-color: var(--color-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* =========================
+   CARD PRINCIPAL
+========================= */
+.mont__card {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 24px;
+    border: 2px solid var(--color-border);
+    box-shadow: 0 0 40px var(--color-primary-soft);
+    padding: 28px 22px;
+    text-align: center;
+    position: relative;
+}
+
+/* =========================
+   HEADER
+========================= */
+.mont__header {
+    margin-bottom: 28px;
+}
+
+.mont__title {
+    color: var(--color-primary);
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.mont__date {
+    color: var(--color-muted);
+    font-size: 14px;
+}
+
+/* =========================
+   BODY
+========================= */
+.mont__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+}
+
+/* =========================
+   IMAGEN
+========================= */
+.mont__image-container {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.mont__image-container::before {
+    content: "";
+    position: absolute;
+    inset: -10px;
+    border-radius: 50%;
+    overflow: hidden;
+    animation: glow 2s infinite alternate;
+    border: 2.5px solid var(--color-bg);
+}
+
+
+.mont__image {
+    width: 145px;
+    object-fit: contain;
+    transform: translateY(6px);
+    z-index: 1;
+}
+
+
+
+/* =========================
+   TEXTO
+========================= */
+.mont__text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mont__paragraph {
+    color: var(--color-muted);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* =========================
+   BOTÓN
+========================= */
+.mont__button {
+    margin-top: 10px;
+    padding: 12px 28px;
+    border-radius: 30px;
+    border: 2px solid var(--color-border);
+    background-color: transparent;
+    color: var(--color-primary);
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 0 20px var(--color-primary-soft);
+    transition: all 0.3s ease;
+}
+
+.mont__button:hover {
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+    box-shadow: 0 0 30px var(--color-primary);
+}
+
+/* =========================
+   FOOTER TEXTO
+========================= */
+.mont__footer-text {
+    margin-top: 10px;
+    font-size: 18px;
+    color: var(--color-primary);
+    font-style: italic;
+}
+
+
+@keyframes glow {
+ 0% {
+    box-shadow: 0 0 13px #ff6b9e, inset 0 0 10px #ff6b9e;
+}
+
+100% {
+    box-shadow: 0 0 20px #ff6b9e, inset 0 0 20px #ff6b9e;
+}
+}

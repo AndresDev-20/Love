@@ -1,0 +1,100 @@
+/* =========================
+   VARIABLES
+========================= */
+:root {
+    --color-bg: #000000f6;
+    --color-primary: #ff5fa2;
+    --color-primary-soft: rgba(255, 95, 162, 0.4);
+    --color-text: #ffffff;
+    --color-muted: #bdbdbd;
+    --color-border: rgba(255, 95, 162, 0.6);
+    --heart-color: #ff5fa2;
+
+    --note-bg: #000;
+    --note-pink: #ff5fa2;
+    --note-pink-soft: rgba(255, 95, 162, 0.4);
+    --note-text: #ffffff;
+
+    --note-pink: #ff5fa2;
+    --note-text: #f1f1f1;
+}
+
+/* =========================
+   RESET BÁSICO
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.hearts {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.heart {
+    position: absolute;
+    top: -10%;
+    width: 14px;
+    height: 14px;
+    background: var(--heart-color);
+    transform: rotate(45deg);
+    opacity: 0.7;
+    animation: fall linear infinite;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: var(--heart-color);
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -7px;
+    left: 0;
+}
+
+.heart::after {
+    left: -7px;
+    top: 0;
+}
+
+.heart:nth-child(1) { left: 10%; animation-duration: 8s; animation-delay: 0s; }
+.heart:nth-child(2) { left: 20%; animation-duration: 10s; animation-delay: 2s; }
+.heart:nth-child(3) { left: 30%; animation-duration: 7s; animation-delay: 1s; }
+.heart:nth-child(4) { left: 40%; animation-duration: 9s; animation-delay: 3s; }
+.heart:nth-child(5) { left: 50%; animation-duration: 11s; animation-delay: 0s; }
+.heart:nth-child(6) { left: 60%; animation-duration: 8s; animation-delay: 4s; }
+.heart:nth-child(7) { left: 70%; animation-duration: 10s; animation-delay: 1s; }
+.heart:nth-child(8) { left: 80%; animation-duration: 7s; animation-delay: 2s; }
+.heart:nth-child(9) { left: 90%; animation-duration: 12s; animation-delay: 3s; }
+.heart:nth-child(10){ left: 95%; animation-duration: 9s; animation-delay: 0s; }
+
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(45deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(120vh) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+/* =========================
+   CONTENEDOR GENERAL
+========================= */
