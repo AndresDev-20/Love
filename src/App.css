@@ -71,6 +71,7 @@ body {
 .heart::after {
     left: -7px;
     top: 0;
+    
 }
 
 .heart:nth-child(1) { left: 10%; animation-duration: 8s; animation-delay: 0s; }
