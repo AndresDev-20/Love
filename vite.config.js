@@ -10,7 +10,7 @@ export default defineConfig({
       includeAssets: [
         'favicon.ico',
         'apple-touch-icon.png',
-        'icons/icon-192.png',
+        'icons/icon-192.jpeg',
         'icons/icon-512.png'
       ],
       manifest: {
@@ -25,7 +25,7 @@ export default defineConfig({
         orientation: 'portrait',
         icons: [
           {
-            src: 'icons/icon-192.png',
+            src: 'icons/icon-192.jpeg',
             sizes: '192x192',
             type: 'image/png'
           },
