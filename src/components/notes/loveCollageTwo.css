@@ -1,210 +1,178 @@
 .storyLove {
+  position: fixed;
+  inset: 0;
 
-    position: fixed;
-    inset: 0;
+  background: rgba(0, 0, 0, 0.9);
 
-    background: rgba(0,0,0,.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    z-index: 999;
-
+  z-index: 999;
 }
 
 .storyLove__card {
+  width: 95%;
+  max-width: 700px;
 
-    width: 95%;
-    max-width: 700px;
+  max-height: 90vh;
 
-    max-height: 90vh;
+  overflow-y: auto;
 
-    overflow-y: auto;
+  background: black;
 
-    background: black;
+  border-radius: 20px;
 
-    border-radius: 20px;
+  padding: 25px;
 
-    padding: 25px;
+  box-shadow:
+    0 0 20px #ff2e88,
+    0 0 40px #ff2e88,
+    0 0 60px #ff2e88;
 
-    box-shadow:
-        0 0 20px #ff2e88,
-        0 0 40px #ff2e88,
-        0 0 60px #ff2e88;
+  border: 2px solid #ff2e88;
 
-    border: 2px solid #ff2e88;
-
-    animation: fadeIn .6s ease;
-
+  animation: fadeIn 0.6s ease;
 }
 
 @keyframes fadeIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
 
-    from {
-        transform: scale(.7);
-        opacity: 0;
-    }
-
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .storyLove__close {
+  position: absolute;
 
-    position: absolute;
+  right: 20px;
+  top: 10px;
 
-    right: 20px;
-    top: 10px;
+  background: none;
+  border: none;
 
-    background: none;
-    border: none;
+  color: #ff2e88;
 
-    color: #ff2e88;
+  font-size: 22px;
 
-    font-size: 22px;
-
-    cursor: pointer;
-
+  cursor: pointer;
 }
 
 .storyLove__title {
+  text-align: center;
 
-    text-align: center;
+  color: #ff2e88;
 
-    color: #ff2e88;
+  font-size: 28px;
 
-    font-size: 28px;
-
-    margin-bottom: 20px;
-
+  margin-bottom: 20px;
 }
 
 .storyLove__list {
+  display: flex;
+  flex-direction: column;
 
-    display: flex;
-    flex-direction: column;
-
-    gap: 30px;
-
+  gap: 30px;
 }
 
 .storyLove__row {
+  display: flex;
 
-    display: flex;
+  align-items: center;
 
-    align-items: center;
-
-    gap: 20px;
-
+  gap: 20px;
 }
 
 .storyLove__row--reverse {
-
-    flex-direction: row-reverse;
-
+  flex-direction: row-reverse;
 }
 
 .storyLove__img {
+  width: 200px;
+  height: 200px;
 
-    width: 200px;
-    height: 200px;
+  object-fit: cover;
 
-    object-fit: cover;
+  border-radius: 15px;
 
-    border-radius: 15px;
-
-    box-shadow:
-        0 0 10px #ff2e88,
-        0 0 20px #ff2e88;
-
+  box-shadow:
+    0 0 10px #ff2e88,
+    0 0 20px #ff2e88;
 }
 
 .storyLove__text {
+  color: white;
 
-    color: white;
+  font-size: 14.5px;
 
-    font-size: 16px;
+  line-height: 1.6;
 
-    line-height: 1.6;
-
-    max-width: 350px;
-
+  max-width: 350px;
 }
 
 .storyLove__footer {
+  margin-top: 25px;
 
-    margin-top: 25px;
+  text-align: center;
 
-    text-align: center;
+  color: #ff2e88;
 
-    color: #ff2e88;
+  font-style: italic;
 
-    font-style: italic;
-
-    font-size: 18px;
-
+  font-size: 18px;
 }
 
 .storyLove__final {
+  margin-top: 40px;
 
-    margin-top: 40px;
+  padding-top: 20px;
 
-    padding: 20px;
+  border-top: 2px solid #ff2e88;
 
-    border-top: 2px solid #ff2e88;
+  text-align: center;
 
-    text-align: center;
-
-    animation: fadeIn 2s ease;
-
+  animation: fadeIn 2s ease;
 }
 
 .storyLove__final p {
+  color: white;
 
-    color: white;
+  line-height: 1.8;
 
-    font-size: 17px;
-
-    line-height: 1.8;
-
-    text-shadow: 0 0 10px #ff2e88;
-
+  text-shadow: 0 0 10px #ff2e88;
 }
 
 .storyLove__sign {
+  margin-top: 30px;
 
-    margin-top: 30px;
+  text-align: center;
 
-    text-align: center;
+  color: #ff2e88;
 
-    color: #ff2e88;
+  font-style: italic;
 
-    font-style: italic;
-
-    font-size: 18px;
-
+  font-size: 18px;
 }
 
 .storyLove__line {
+  height: 4px;
 
-    height: 4px;
+  margin: 10px 0;
 
-    margin: 10px 0;
+  border-radius: 10px;
 
-    border-radius: 10px;
+  background: repeating-linear-gradient(
+    45deg,
+    #ff2e88,
+    #ff2e88 10px,
+    transparent 10px,
+    transparent 20px
+  );
 
-    background: repeating-linear-gradient(
-        45deg,
-        #ff2e88,
-        #ff2e88 10px,
-        transparent 10px,
-        transparent 20px
-    );
-
-    box-shadow: 0 0 10px #ff2e88;
-
+  box-shadow: 0 0 10px #ff2e88;
 }

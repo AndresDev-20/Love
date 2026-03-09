@@ -3,9 +3,8 @@ import luna from "../../assets/images/luna.png";
 import { useState } from "react";
 import NoteTwo from "../../components/notes/NoteTwo";
 
-
 function MontTwo() {
-    const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
   return (
     <div className="mont">
@@ -25,16 +24,16 @@ function MontTwo() {
               En estos dos meses, mi amor por ti crece cada día más.
             </p>
             <p className="mont__paragraph">
-              Eres el amor que ilumina mi vida como la luna iluminando la noche más oscura 🥺❤️🌙.
+              Eres el amor que ilumina mi vida como la luna iluminando la noche
+              más oscura 🥺❤️🌙.
             </p>
           </div>
 
           <button className="mont__button" onClick={() => setOpen(true)}>
-    ❤️ Abre Mi Corazón
-</button>
+            ❤️ Abre Mi Corazón
+          </button>
 
-{open && <NoteTwo onClose={() => setOpen(false)} />}
-
+          {open && <NoteTwo onClose={() => setOpen(false)} />}
 
           <h2 className="mont__footer-text">Para ti, con amor</h2>
         </div>

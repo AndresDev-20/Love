@@ -3,9 +3,8 @@ import ramo from "../../assets/images/ramo.png";
 import { useState } from "react";
 import Note from "../../components/notes/Note";
 
-
 function Mont() {
-    const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
   return (
     <div className="mont">
@@ -30,11 +29,10 @@ function Mont() {
           </div>
 
           <button className="mont__button" onClick={() => setOpen(true)}>
-    ❤️ Abre Mi Corazón
-</button>
+            ❤️ Abre Mi Corazón
+          </button>
 
-{open && <Note onClose={() => setOpen(false)} />}
-
+          {open && <Note onClose={() => setOpen(false)} />}
 
           <h2 className="mont__footer-text">Para ti, con amor</h2>
         </div>
