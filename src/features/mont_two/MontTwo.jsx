@@ -22,7 +22,7 @@ function MontTwo() {
 
           <div className="mont__text">
             <p className="mont__paragraph">
-              En estos dos meses contigo, mi amor por ti brilla cada día más fuerte.
+              En estos dos meses, mi amor por ti crece cada día más.
             </p>
             <p className="mont__paragraph">
               Eres el amor que ilumina mi vida como la luna iluminando la noche más oscura 🥺❤️🌙.
