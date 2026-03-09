@@ -1,5 +1,6 @@
 import "./home.css";
 import Mont from "./mont_one/Mont";
+import MontTwo from "./mont_two/montTwo";
 
 function Home() {
   return (
@@ -36,7 +37,10 @@ function Home() {
         <span class="heart"></span>
         <span class="heart"></span>
       </div>
+      <div className="home__content">
+      <MontTwo />
       <Mont />
+      </div>
     </div>
   );
 }

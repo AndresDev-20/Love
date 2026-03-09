@@ -1,0 +1,28 @@
+
+.mont__image-container2 {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.mont__image-container2::before {
+    content: "";
+    position: absolute;
+    inset:6px;
+    border-radius: 50%;
+    overflow: hidden;
+    animation: glow 2s infinite alternate;
+    border: 2.5px solid var(--color-bg);
+}
+.mont__image2 {
+    width: 144px;
+    object-fit: contain;
+    transform: translateY(6px);
+    z-index: 1;
+    margin-top: -0.6em;
+}

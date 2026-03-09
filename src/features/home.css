@@ -1,0 +1,9 @@
+.home__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3em;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
