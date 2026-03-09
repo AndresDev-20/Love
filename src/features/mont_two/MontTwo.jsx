@@ -4,7 +4,7 @@ import { useState } from "react";
 import NoteTwo from "../../components/notes/NoteTwo";
 
 
-function Monttwo() {
+function MontTwo() {
     const [open, setOpen] = useState(false);
 
   return (
@@ -43,4 +43,4 @@ function Monttwo() {
   );
 }
 
-export default Monttwo;
+export default MontTwo;
