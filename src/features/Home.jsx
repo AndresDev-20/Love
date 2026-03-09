@@ -1,6 +1,6 @@
 import "./home.css";
 import Mont from "./mont_one/Mont";
-import MontTwo from "./mont_two/montTwo";
+import MontTwo from "./Mont_two/montTwo";
 
 function Home() {
   return (
