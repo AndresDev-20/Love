@@ -11,7 +11,7 @@ function MontTwo() {
       <div className="mont__card">
         <header className="mont__header">
           <h1 className="mont__title">Feliz Segundo Mes Mi Amor Hermosa</h1>
-          <p className="mont__date">09-01-2026</p>
+          <p className="mont__date">09-03-2026</p>
         </header>
 
         <div className="mont__body">
