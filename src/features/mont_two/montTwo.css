@@ -18,6 +18,7 @@
     overflow: hidden;
     animation: glow 2s infinite alternate;
     border: 2.5px solid var(--color-bg);
+    z-index: 100;
 }
 .mont__image2 {
     width: 144px;
