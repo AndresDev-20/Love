@@ -1,5 +1,6 @@
 .mont__image4 {
-    width: 157px;
+    width: 100%;
+    max-width: 157px;;
     object-fit: contain;
     transform: translateY(6px);
     z-index: 0;

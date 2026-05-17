@@ -12,7 +12,7 @@
     width: 100%;
     max-width: 420px;
     margin: 1em 1em 0em 1em;
-    height: 37em;
+    min-height: 37em;
     border-radius: 24px;
     border: 2px solid var(--color-border);
     box-shadow: 0 0 40px var(--color-primary-soft);

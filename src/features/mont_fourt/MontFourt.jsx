@@ -35,7 +35,7 @@ function MontFourt() {
             </p>
 
             <p className="mont__paragraph">
-              Y esa semana viviendo juntos
+              esa semana viviendo juntos
               me hizo sentir lo bonito que sería
               compartir una vida entera contigo. ✨🏡
             </p>
