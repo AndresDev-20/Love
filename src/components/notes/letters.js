@@ -1,9 +1,10 @@
-// Cada carta trae su canción de YouTube (solo suena con la carta abierta)
+// Cada carta trae su canción de YouTube con letra (solo suena con la carta abierta)
 
 export const letterFive = {
     title: "Cinco Meses Contigo",
     youtube: {
-        id: "sD9_l3oDOag",
+        id: "-o9f11U6Xr8",
+        fallback: "qYnm4cGdHPs",
         title: "No Hay Nadie Más",
         artist: "Sebastián Yatra",
     },
@@ -20,7 +21,8 @@ export const letterFive = {
 export const letterSix = {
     title: "Medio Año a Tu Lado",
     youtube: {
-        id: "cpN78ZjnCZY",
+        id: "mellNB-bKBo",
+        fallback: "17z3Y1YnRTs",
         title: "Cásate Conmigo",
         artist: "Silvestre Dangond & Nicky Jam",
     },
@@ -36,7 +38,8 @@ export const letterSix = {
 export const letterSeven = {
     title: "Siete Meses, Mi Reina",
     youtube: {
-        id: "ghAvJMxE1qo",
+        id: "_SqMp1Nib3I",
+        fallback: "WenH3ypnHnw",
         title: "Un Año",
         artist: "Sebastián Yatra & Reik",
     },
@@ -52,7 +55,8 @@ export const letterSeven = {
 export const letterEight = {
     title: "El Mes en que Fui a Verte",
     youtube: {
-        id: "SRm2Ch4oFWs",
+        id: "IAQ1aYZfSyI",
+        fallback: "r2j_rUlNilY",
         title: "Pareja del Año",
         artist: "Sebastián Yatra & Myke Towers",
     },
