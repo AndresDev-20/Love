@@ -1,7 +1,7 @@
 import "./montFive.css";
-import imagen from "../../assets/images/love.png";
 import { useState } from "react";
-import NoteFour from "../../components/notes/NoteFour";
+import LoveLetter from "../../components/notes/LoveLetter";
+import { letterFive } from "../../components/notes/letters";
 
 function MontFive() {
   const [open, setOpen] = useState(false);
@@ -35,12 +35,12 @@ Y si estos cinco meses han sido así de bonitos, no imagino todo lo que nos espe
             </p>
           </div>
 
-          <button className="mont__button">😻💘</button>
+          <button className="mont__button" onClick={() => setOpen(true)}>
+            😻💘 Abre Mi Corazón
+          </button>
 
           {open && (
-            <NoteFour
-              onClose={() => setOpen(false)}
-            />
+            <LoveLetter {...letterFive} onClose={() => setOpen(false)} />
           )}
 
           <h2 className="mont__footer-text">

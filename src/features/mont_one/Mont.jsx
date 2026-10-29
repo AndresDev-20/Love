@@ -1,6 +1,7 @@
 import "./mont.css";
 import ramo from "../../assets/images/ramo.png";
 import { useState } from "react";
+import { createPortal } from "react-dom";
 import Note from "../../components/notes/Note";
 
 function Mont() {
@@ -32,7 +33,7 @@ function Mont() {
             ❤️ Abre Mi Corazón
           </button>
 
-          {open && <Note onClose={() => setOpen(false)} />}
+          {open && createPortal(<Note onClose={() => setOpen(false)} />, document.body)}
 
           <h2 className="mont__footer-text">Para ti, con amor</h2>
         </div>

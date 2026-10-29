@@ -1,6 +1,7 @@
 import "./montTwo.css";
 import luna from "../../assets/images/luna.png";
 import { useState } from "react";
+import { createPortal } from "react-dom";
 import NoteTwo from "../../components/notes/NoteTwo";
 
 function MontTwo() {
@@ -33,7 +34,7 @@ function MontTwo() {
             ❤️ Abre Mi Corazón
           </button>
 
-          {open && <NoteTwo onClose={() => setOpen(false)} />}
+          {open && createPortal(<NoteTwo onClose={() => setOpen(false)} />, document.body)}
 
           <h2 className="mont__footer-text">Para ti, con amor</h2>
         </div>

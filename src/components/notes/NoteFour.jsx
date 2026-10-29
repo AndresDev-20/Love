@@ -1,6 +1,7 @@
 /* NoteFour.jsx */
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
+import { useLetterAudio, useLockScroll } from "../../hooks/useLetter";
 import "./loveCollageFour.css";
 
 import amorMp3 from "../../assets/music/song_four.mp3";
@@ -16,22 +17,8 @@ import foto7 from "../../assets/images/mont_04/a7.jpeg";
 function NoteFour({ onClose }) {
   const audioRef = useRef(null);
 
-  useEffect(() => {
-    const audio = audioRef.current;
-
-    if (audio) {
-      audio.volume = 0.7;
-
-      audio.play().catch(() => {});
-    }
-
-    return () => {
-      if (audio) {
-        audio.pause();
-        audio.currentTime = 0;
-      }
-    };
-  }, []);
+  useLetterAudio(audioRef, 0.7);
+  useLockScroll();
 
  /* ========================================= */
 /* ITEMS NOTE FOUR */

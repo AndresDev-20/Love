@@ -1,4 +1,5 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
+import { useLetterAudio, useLockScroll } from "../../hooks/useLetter";
 import "./loveCollageThree.css";
 
 import amorMp3 from "../../assets/music/song_three.mp4";
@@ -6,27 +7,11 @@ import amorMp3 from "../../assets/music/song_three.mp4";
 function NoteThree({ onClose }) {
   const audioRef = useRef(null);
 
-  useEffect(() => {
-    const audio = audioRef.current;
-
-    if (audio) {
-      audio.volume = 0.7;
-
-      audio.play().catch(() => {});
-    }
-
-    return () => {
-      if (audio) {
-        audio.pause();
-        audio.currentTime = 0;
-      }
-    };
-  }, []);
+  useLetterAudio(audioRef, 0.7);
+  useLockScroll();
 
   return (
     <div className="storyLove storyLove--sad">
-    <audio ref={audioRef} src={amorMp3} />
-
     <div className="broken-hearts">
       <span>💔</span>
       <span>🖤</span>

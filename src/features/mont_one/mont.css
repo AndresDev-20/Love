@@ -142,3 +142,53 @@
     box-shadow: 0 0 20px #ff6b9e, inset 0 0 20px #ff6b9e;
 }
 }
+/* =========================
+   📱 TOQUES PARA CELULAR
+========================= */
+.mont__button {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    animation: pulseButton 2.6s ease-in-out infinite;
+}
+
+.mont__button:active {
+    transform: scale(0.94);
+}
+
+.mont__card {
+    background: linear-gradient(180deg, rgba(28, 8, 18, 0.92), rgba(0, 0, 0, 0.9));
+}
+
+@keyframes pulseButton {
+    0%, 100% { box-shadow: 0 0 16px var(--color-primary-soft); }
+    50% { box-shadow: 0 0 30px var(--color-primary-soft); }
+}
+
+@media (max-width: 480px) {
+    .mont__card {
+        margin: 0 16px;
+        min-height: auto;
+        padding: 26px 18px 30px;
+    }
+
+    .mont__title {
+        font-size: clamp(22px, 6.5vw, 26px);
+    }
+
+    .mont__paragraph {
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .mont__button {
+        width: 100%;
+        padding: 14px 20px;
+        font-size: 16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .mont__button {
+        animation: none;
+    }
+}

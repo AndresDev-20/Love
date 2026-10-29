@@ -1,24 +1,13 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
+import { useLetterAudio, useLockScroll } from "../../hooks/useLetter";
 import "./note.css";
 import amorMp3 from "../../assets/music/song.mp4";
 
 function Note({ onClose }) {
     const audioRef = useRef(null);
 
-    useEffect(() => {
-    const audio = audioRef.current;
-
-    if (audio) {
-        audio.play().catch(() => {});
-    }
-
-    return () => {
-        if (audio) {
-            audio.pause();
-            audio.currentTime = 0;
-        }
-    };
-}, []);
+    useLetterAudio(audioRef, 0.6);
+    useLockScroll();
 
 
     return (

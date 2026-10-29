@@ -1,6 +1,7 @@
 import "./montFour.css";
 import imagen from "../../assets/images/love.png";
 import { useState } from "react";
+import { createPortal } from "react-dom";
 import NoteFour from "../../components/notes/NoteFour";
 
 function MontFourt() {
@@ -48,11 +49,7 @@ function MontFourt() {
             ❤️ Abre Mi Corazón
           </button>
 
-          {open && (
-            <NoteFour
-              onClose={() => setOpen(false)}
-            />
-          )}
+          {open && createPortal(<NoteFour onClose={() => setOpen(false)} />, document.body)}
 
           <h2 className="mont__footer-text">
             Para ti, con amor ❤️

@@ -1,7 +1,6 @@
-
-import imagen from "../../assets/images/love.png";
 import { useState } from "react";
-import NoteFour from "../../components/notes/NoteFour";
+import LoveLetter from "../../components/notes/LoveLetter";
+import { letterSix } from "../../components/notes/letters";
 
 function MontSix() {
   const [open, setOpen] = useState(false);
@@ -26,12 +25,12 @@ function MontSix() {
             <p className="mont__paragraph"> seis meses contigo y todavía me emociona pensar en todo lo que nos falta por vivir juntos. 🥺❤️ Me hace tanta ilusión imaginar el día en que podamos despertar juntos, compartir nuestro hogar y construir poquito a poquito la vida que tanto hemos soñado. 🏡✨ </p> <p className="mont__paragraph"> hemos pasado por momentos hermosos y también por días difíciles, pero cada experiencia me ha hecho querer aún más que llegue ese momento de tenerte a mi lado. Qué emoción pensar en nosotros viviendo juntos, haciendo nuestro hogar y creando recuerdos que sean solamente nuestros. 💘🥺🏡✨ </p>
           </div>
 
-          <button className="mont__button">😻💘</button>
+          <button className="mont__button" onClick={() => setOpen(true)}>
+            😻💘 Abre Mi Corazón
+          </button>
 
           {open && (
-            <NoteFour
-              onClose={() => setOpen(false)}
-            />
+            <LoveLetter {...letterSix} onClose={() => setOpen(false)} />
           )}
 
           <h2 className="mont__footer-text">

@@ -1,6 +1,6 @@
-import imagen from "../../assets/images/love.png";
 import { useState } from "react";
-import NoteFour from "../../components/notes/NoteFour";
+import LoveLetter from "../../components/notes/LoveLetter";
+import { letterSeven } from "../../components/notes/letters";
 
 function MontSeven() {
   const [open, setOpen] = useState(false);
@@ -30,9 +30,11 @@ function MontSeven() {
             </p>
           </div>
 
-          <button className="mont__button">😻💘</button>
+          <button className="mont__button" onClick={() => setOpen(true)}>
+            😻💘 Abre Mi Corazón
+          </button>
 
-          {open && <NoteFour onClose={() => setOpen(false)} />}
+          {open && <LoveLetter {...letterSeven} onClose={() => setOpen(false)} />}
 
           <h2 className="mont__footer-text">
             Por muchos meses más, mi amor ❤️

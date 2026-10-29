@@ -1,0 +1,48 @@
+.mont__card.mont__card--eight {
+    box-shadow: 0 0 50px rgba(255, 95, 162, 0.5);
+}
+
+.eight__badge {
+    display: inline-block;
+    padding: 4px 12px;
+    margin-bottom: 12px;
+    border-radius: 20px;
+    background: rgba(255, 95, 162, 0.15);
+    color: var(--color-primary);
+    font-size: 13px;
+}
+
+.mont__image--bloom {
+    animation: bloom 3s ease-in-out infinite;
+}
+
+.eight__spark {
+    position: absolute;
+    font-size: 18px;
+    z-index: 2;
+    animation: sparkle 2.4s ease-in-out infinite;
+}
+
+.eight__spark--1 { top: 6%; left: 4%; }
+.eight__spark--2 { top: 12%; right: 0; animation-delay: 0.8s; }
+.eight__spark--3 { bottom: 8%; left: 10%; animation-delay: 1.6s; }
+
+@keyframes bloom {
+    0%, 100% {
+        transform: translateY(6px) scale(1);
+    }
+    50% {
+        transform: translateY(2px) scale(1.06);
+    }
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0.4);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}

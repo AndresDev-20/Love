@@ -1,6 +1,7 @@
 import "./montThree.css";
 import imagen from "../../assets/images/frasco.png";
 import { useState } from "react";
+import { createPortal } from "react-dom";
 import NoteTwo from "../../components/notes/NoteTwo";
 import NoteThree from "../../components/notes/NoteThree";
 
@@ -34,7 +35,7 @@ function MontThree() {
             ❤️ Abre Mi Corazón
           </button>
 
-          {open && <NoteThree onClose={() => setOpen(false)} />}
+          {open && createPortal(<NoteThree onClose={() => setOpen(false)} />, document.body)}
 
           <h2 className="mont__footer-text">Para ti, con amor</h2>
         </div>
